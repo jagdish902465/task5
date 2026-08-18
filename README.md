@@ -1,57 +1,26 @@
-Getting Started with Create React App
-This project was bootstrapped with Create React App.
+# soc-now-u-c-me
+I am doing the project "Now You C Me – Build Your Own C Compiler" under Aditya Sanapala as mentor as part of SoC 2025. The project is about understanding how compilers work and trying to build a working compiler for a simplified version of C called C--. Each week had structured tasks and resources which I followed. I also referred to a few extra tutorials and blogs for better understanding of compiler phases. My week-wise learning is as follows:
+Week 1:
 
-Available Scripts
-In the project directory, you can run:
+Compiler Architecture: I learnt the different stages of a compiler – lexical analysis, parsing, semantic analysis etc.
 
-npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+Lexical Analysis: I implemented a lexer in C++ that identifies keywords, identifiers, operators, literals, delimiters etc. and gives output with token type, value, and line-column position.
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+Tokenizer Output: I wrote a small program to read a C-- file, tokenize it, and print tokens in a readable format.
 
-npm test
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+Project Structure & Build: I set up a basic folder structure (src/, tests/) and wrote a Makefile with make, make test, make clean commands for build automation and testing.
 
-npm run build
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+Week 2:
 
-See the section about deployment for more information.
+Parsing Concepts: I learnt about context-free grammars, BNF notation, recursive descent parsing and how abstract syntax trees (ASTs) differ from parse trees.
 
-npm run eject
-Note: this is a one-way operation. Once you eject, you can't go back!
+C-- Grammar: I wrote the grammar of C-- in BNF format using constructs like declaration, expression, statement, loops etc.
 
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+AST Node Classes: I created base and derived classes in C++ for different types of nodes like IfStmt, ReturnStmt, BinaryOp, Number, Variable etc.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Recursive Descent Parser: I implemented parsing functions for major grammar rules and built the AST from the token stream. I also added error handling and sync functions for parser recovery.
 
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+AST Printing: I wrote code to pretty-print the AST and used it to debug and verify parsing outputs of small programs.
 
-Learn More
-You can learn more in the Create React App documentation.
-
-To learn React, check out the React documentation.
-
-Code Splitting
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-Analyzing the Bundle Size
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-Making a Progressive Web App
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-Advanced Configuration
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-Deployment
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-npm run build fails to minify
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+check readme files in weekwise folders
